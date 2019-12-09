@@ -79,7 +79,7 @@ header {
 #banner {
 	background-image: url("../img/banner.jpg");
 
-	height:			200px;
+	height:			150px;
 
 	background-attachment:	fixed;
 	background-position:	center;
@@ -88,6 +88,56 @@ header {
 }
 
 main {
+	text-align: justify;
 	padding-left:	20%;
 	padding-right:	20%;
+}
+
+#post {
+	margin-top: 20px;
+	border-radius: 10px;
+	padding: 10px;
+	background: #303030;
+	color:		#e5e5e5;
+	padding-top: 5px;
+}
+
+#post > h1 {
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+#post > p {
+	padding: 0;
+	margin: 0;
+	margin-top: 5px;
+}
+
+#post > .centered {
+	display: block;
+	width:100%;
+
+}
+
+a {
+	text-decoration:	none;
+}
+
+a:active{
+	/* color:			#e5e5e5; */
+	color:			#4287f5;
+}
+
+a:link {
+	/* color:			#e5e5e5; */
+	color:			#4287f5;
+}
+
+a:visited {
+	color:			#bf13a3;
+}
+
+a:hover {
+	/* background:		#e5e5e5; */
+	color:			#e5e5e5;
 }
