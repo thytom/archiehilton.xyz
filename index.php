@@ -51,8 +51,8 @@ function printArticles()
 	</header>
 
 	<div id="banner">
-		<a href="https://github.com/thytom"><i class="fa fa-github"></i></a>
-		<a href="mailto:archie.hilton1@gmail.com"><i class="fa fa-envelope"></i></a>
+		<a href="https://github.com/thytom"><i class="fa fa-github-square"></i></a>
+		<a href="mailto:archie.hilton1@gmail.com"><i class="fa fa-envelope-square"></i></a>
 	</div>
 
 	<main>
