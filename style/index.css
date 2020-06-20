@@ -1,12 +1,13 @@
 html {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 15px;
+	background:		#202020;
+	color:			#e5e5e5;
 }
 
 body {
-	background:		#202020;
-	color:			#e5e5e5;
-	margin:			0 !important;
+	width: 60%;
+	margin:			0 auto 0 auto !important;
 	padding:		0 !important;
 	height: 100%;
 }
@@ -93,9 +94,9 @@ header {
 	background-image: url("../img/banner.jpg");
 
 	height:			3rem;
-	width: 60%;
-	margin-left: auto;
-	margin-right: auto;
+	width: 100%;
+	/* margin-left: auto; */
+	/* margin-right: auto; */
 
 	background-attachment:	fixed;
 	background-position:	center;
@@ -103,11 +104,6 @@ header {
 	background-size:		cover;
 
 	margin-bottom: 10px;
-}
-
-main {
-	padding-left:	20%;
-	padding-right:	20%;
 }
 
 .postheading {
@@ -175,6 +171,8 @@ img.img_span {
 }
 
 #sidebar > .post {
+	position: sticky;
+	top: 10px;
 	margin: 0;
 	margin-bottom: 10px;
 }

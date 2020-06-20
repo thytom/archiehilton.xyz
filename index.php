@@ -37,6 +37,8 @@ function printArticles()
 	<title>Archie Hilton</title>
 
 	<link rel="stylesheet" href="style/index.css">
+	<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 1000px)" href="mobile.css" />
+
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
 </head>
 <body>

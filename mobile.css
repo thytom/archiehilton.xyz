@@ -1,0 +1,11 @@
+body {
+	width: 100%;
+}
+
+.post {
+	margin-right: 10px;
+}
+
+#sidebar > .post {
+	margin-left: 10px;
+}
