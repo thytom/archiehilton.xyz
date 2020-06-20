@@ -1,5 +1,5 @@
 html {
-	font-family: Arial Sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
 }
 
@@ -17,6 +17,7 @@ header {
 	margin:			0 !important;
 	padding-left:	20%;
 	padding-right: 	20%;
+	padding-bottom: 1%;
 }
 
 #profile {
@@ -26,8 +27,20 @@ header {
 }
 
 #title {
+	text-align: center;
+	width: 100%;
+	margin: 		0;
+	margin-top: 10px;
+	text:			#e5e5e5;
+}
+
+#subtitle {
+	text-align: center;
+	width: 100%;
 	margin: 		0;
 	text:			#e5e5e5;
+	text-decoration: none;
+	font-weight: normal;
 }
 
 #topnav {
@@ -79,44 +92,96 @@ header {
 #banner {
 	background-image: url("../img/banner.jpg");
 
-	height:			150px;
+	height:			3rem;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
 
 	background-attachment:	fixed;
 	background-position:	center;
 	background-repeat:		no-repeat;
 	background-size:		cover;
+
+	margin-bottom: 10px;
 }
 
 main {
-	text-align: justify;
 	padding-left:	20%;
 	padding-right:	20%;
 }
 
-#post {
-	margin-top: 20px;
-	border-radius: 10px;
+.postheading {
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	padding: 0;
+	margin:0;
+}
+
+.postheading > h1 {
+	font-size; 1.2em;
+	padding:0;
+	margin: 0;
+}
+
+.postheading > p {
+	margin: 0;
+	padding: 0;
+	color: #777777;
+}
+
+.post {
+	/* border-radius: 10px; */
 	padding: 10px;
 	background: #303030;
 	color:		#e5e5e5;
-	padding-top: 5px;
+	margin: 10px;
+	margin-top: 0px;
+	margin-right: 0px;
 }
 
-#post > h1 {
-	margin: 0;
-	margin-bottom: 5px;
-}
-
-#post > p {
+.post > p {
+	font-size: 1em;
 	padding: 0;
 	margin: 0;
 	margin-top: 5px;
 }
 
-#post > .centered {
+.post > p > br {
 	display: block;
-	width:100%;
+	content: "";
+	margin-top: 5px;
+}
 
+img.img_centered {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.img_span {
+	width: 100%;
+}
+
+#sidebar {
+	margin: 0px 0px 0px 0px;
+	/* padding: 10px; */
+	padding: 0;
+	width: 25%;
+}
+
+#articles {
+	width: 75%;
+}
+
+#sidebar > .post {
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.horizontal {
+	display: flex;
+	flex-flow: row nowrap;
 }
 
 a {
