@@ -40,6 +40,7 @@ function printArticles()
 	<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 1000px)" href="mobile.css" />
 
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<header>
@@ -49,14 +50,10 @@ function printArticles()
 		</div>
 	</header>
 
-	<div id="banner"></div>
-
-	<!-- <nav id="topnav"> -->
-	<!-- 	<a class="currentLink" href="index.html">Home</a> -->
-	<!-- 	<a href="about.html">About</a> -->
-	<!-- 	<a href="contact.html">Contact</a> -->
-	<!-- 	<a href="http://cv.archiehilton.xyz">CV</a> -->
-	<!-- </nav> -->
+	<div id="banner">
+		<a href="https://github.com/thytom"><i class="fa fa-github"></i></a>
+		<a href="mailto:archie.hilton1@gmail.com"><i class="fa fa-envelope"></i></a>
+	</div>
 
 	<main>
 		<div class="horizontal">
@@ -64,8 +61,7 @@ function printArticles()
 				<div class="post">
 					<div class="postheading">
 						<h1>About Me</h1>
-					</div>
-					<hr>
+					</div> <hr>
 					<p>Sorry! This website is currently under construction.
 					In the meantime, feel free to look at my projects on the right!</p>
 				</div>
