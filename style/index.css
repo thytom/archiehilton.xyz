@@ -176,3 +176,17 @@ a:hover {
 	/* background:		#e5e5e5; */
 	color:			#e5e5e5;
 }
+						
+.fa {
+	padding: 0 10px 0 10px;
+}
+
+#links {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#links > li {
+	padding-bottom: 5px;
+}
