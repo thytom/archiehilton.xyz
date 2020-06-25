@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "node ./scripts/index.js",
-	"deploy" : "npm run rebuild && cp -r _build public && npm run clean",
-	"rebuild" : "npm run clean && npm run build",
-	"clean" : "rm -r _build"
+    "deploy": "npm install && npm run build && cp -r _build public && npm run clean",
+    "rebuild": "npm run clean && npm run build",
+    "clean": "rm -r _build"
   },
   "repository": {
     "type": "git",
