@@ -1,5 +1,5 @@
 html {
-	font-size: 25px;
+	font-size: min(20px, 15px);
 }
 
 body {
@@ -9,7 +9,6 @@ body {
 #banner {
 	height: 2vw;
 }
-
 
 .post {
 	margin-right: 0.5vw;
