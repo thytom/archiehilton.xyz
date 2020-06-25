@@ -1,0 +1,31 @@
+{
+  "name": "archiehilton.xyz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./scripts/index.js",
+	"deploy" : "npm run rebuild && cp -r _build public && npm run clean",
+	"rebuild" : "npm run clean && npm run build",
+	"clean" : "rm -r _build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thytom/archiehilton.xyz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thytom/archiehilton.xyz/issues"
+  },
+  "homepage": "https://github.com/thytom/archiehilton.xyz#readme",
+  "dependencies": {
+    "front-matter": "^4.0.2",
+    "highlight.js": "^10.1.1",
+    "marked": "^1.1.0",
+    "natural-sort": "^1.0.0",
+    "ncp": "^2.0.0",
+    "npc": "0.0.1"
+  }
+}

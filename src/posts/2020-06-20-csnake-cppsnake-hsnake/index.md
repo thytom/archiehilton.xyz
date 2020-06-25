@@ -1,5 +1,7 @@
-# CSnake, CppSnake & HSnake
-2020-06-20 12:22
+---
+title: "CSnake, CppSnake & HSnake"
+date: "2020-06-20 12:22"
+---
 
 I posted a program on GitHub last year called CSnake; a terminal-based snake
 game written in C. I had gone through two versions and the code was still awful.

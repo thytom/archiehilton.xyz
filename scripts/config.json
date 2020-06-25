@@ -1,0 +1,10 @@
+{
+	"dev" : {
+		"srcdir" : "./src/",
+		"builddir"	: "./_build",
+		"publicdir" : "./public",
+		"postsdir" : "posts",
+		"templatefile" : "template.html",
+		"copydirs" : ["img", "style"]
+	}
+}
