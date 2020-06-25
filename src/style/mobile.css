@@ -1,11 +1,20 @@
+html {
+	font-size: 25px;
+}
+
 body {
 	width: 100%;
 }
 
+#banner {
+	height: 2vw;
+}
+
+
 .post {
-	margin-right: 10px;
+	margin-right: 0.5vw;
 }
 
 #sidebar > .post {
-	margin-left: 10px;
+	margin-left: 0.5vw;
 }

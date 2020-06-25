@@ -1,12 +1,12 @@
 html {
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 20px;
+	font-size: clamp(10px, 1vw, 30px);
 	background:		#202020;
 	color:			#e5e5e5;
 }
 
 body {
-	width: 60%;
+	width: 1000px;
 	margin:			0 auto 0 auto !important;
 	padding:		0 !important;
 	height: 100%;
@@ -18,20 +18,23 @@ header {
 	margin:			0 !important;
 	padding-left:	20%;
 	padding-right: 	20%;
-	padding-bottom: 1%;
+	padding-bottom: 1vw;
 }
 
 #profile {
-	display:		block;
-	border-radius: 	40%;
-	width: 			150px;
+	border-radius: 50%;
+	width: 8vw;
+	height: 8vw;
+	margin: 1vw 0 0 0;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #title {
 	text-align: center;
 	width: 100%;
 	margin: 		0;
-	margin-top: 10px;
+	margin-top: 1vw;
 	text:			#e5e5e5;
 }
 
@@ -41,24 +44,16 @@ header {
 	margin: 		0;
 	text:			#e5e5e5;
 	text-decoration: none;
-	font-weight: normal;
+	font-weight: 100;
 }
 
 #banner {
-	/* background-image: url("../img/banner.jpg"); */
 	background: #89ccc7;
 
-	height:			3rem;
+	height:			1vw;
 	width: 100%;
-	/* margin-left: auto; */
-	/* margin-right: auto; */
 
-	background-attachment:	fixed;
-	background-position:	center;
-	background-repeat:		no-repeat;
-	background-size:		cover;
-
-	margin-bottom: 10px;
+	margin-bottom: 0.5vw;
 
 	font-size: 2.5rem;
 
@@ -66,10 +61,6 @@ header {
 	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
-}
-
-.fa {
-	padding: 5px;	
 }
 
 #banner > a:link, #banner > a:visited {
@@ -103,10 +94,10 @@ header {
 
 .post {
 	/* border-radius: 10px; */
-	padding: 10px;
+	padding: min(1vw, 15px);
 	background: #303030;
 	color:		#e5e5e5;
-	margin: 10px;
+	margin: 0.5vw;
 	margin-top: 0px;
 	margin-right: 0px;
 }
@@ -115,13 +106,13 @@ header {
 	font-size: 1em;
 	padding: 0;
 	margin: 0;
-	margin-top: 5px;
+	margin-top: 0.5vw;
 }
 
 .post > p > br {
 	display: block;
 	content: "";
-	margin-top: 5px;
+	margin-top: 0.5vw;
 }
 
 img.img_centered {
@@ -146,9 +137,9 @@ img.img_span {
 
 #sidebar > .post {
 	margin: 0;
-	margin-bottom: 10px;
+	margin-bottom: 1vw;
 	position: sticky;
-	top: 10px;
+	top: 1vw;
 }
 
 .horizontal {
