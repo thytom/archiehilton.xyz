@@ -7,7 +7,7 @@ html {
 	color: #222222;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1080px) {
 	html {
 		font-size: 4vw;
 	}
@@ -147,7 +147,7 @@ main {
 		"articles articles articles";
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1080px) {
 	main {
 		grid-template-areas:
 			"about about about"
