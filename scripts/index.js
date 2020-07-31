@@ -21,8 +21,8 @@ const posts = fs.readdirSync(config.dev.srcdir + config.dev.postsdir)
 const indexPosts = JSON.parse(JSON.stringify(posts))
 	.slice(0, 10)
 	.map(post => {
-		if(post.body.length >= 400)
-			post.body = post.body.slice(0, 400) + `... <a href="${post.path}.html">read more</a></p>`;
+		if(post.body.length >= 200)
+			post.body = post.body.slice(0, 200) + `... <a href="${post.path}.html">read more</a></p>`;
 		return p.postHtml(post);
 	})
 	.join('');
