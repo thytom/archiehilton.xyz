@@ -10,7 +10,7 @@ const template = fs.readFileSync(config.dev.srcdir + config.dev.templatefile);
 const articleTemplate = fs.readFileSync(config.dev.srcdir + config.dev.articletemplatefile);
 const archiveTemplate = fs.readFileSync(config.dev.srcdir + config.dev.archivetemplatefile);
 
-console.log("Ensuring " + config.dev.builddir + "exists...");
+console.log("Ensuring " + config.dev.builddir + " exists...");
 fs.mkdirSync(config.dev.builddir, {recursive : true});
 
 console.log("Compiling posts...");
