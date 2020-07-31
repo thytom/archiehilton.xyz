@@ -22,7 +22,6 @@ const indexPosts = JSON.parse(JSON.stringify(posts))
 	.slice(0, 10)
 	.map(post => {
 		post.body = post.body.slice(0, 400) + `... <a href="${post.path}.html">read more</a></p>`;
-		console.log(post.body + "\n\n\n");
 		return p.postHtml(post);
 	})
 	.join('');
