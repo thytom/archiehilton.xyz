@@ -8,8 +8,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<h1 id="title">Archie Hilton</h1>
+	<header class="h-card">
+		<h1 class="p-name" id="title">Archie Hilton</h1>
 		<h4 id="subtitle">Computer Scientist / Software Developer</h4>
 	</header>
 
@@ -17,7 +17,7 @@
 	</div>
 
 	<main>
-		<div class="card" id="aboutme">
+		<div class="card p-summary" id="aboutme">
 			<h1>About Me</h1>
 			${aboutme}
 		</div>
@@ -30,7 +30,7 @@
 				<a href="https://github.com/thytom">GitHub</a>
 			</li>
 		</div>
-		<div id="articles">
+		<div class="h-feed" id="articles">
 			<h1>Articles</h1>
 			${posts}
 		</div>
