@@ -25,15 +25,27 @@ const index = eval('`' + template + '`');
 if(!fs.existsSync(config.dev.builddir))
 	fs.mkdirSync(config.dev.builddir);
 
-console.log("Write index.html to build directory.");
+console.log("Writiting index.html to build directory...");
 fs.writeFileSync(`${config.dev.builddir}/index.html`, index);
 
+console.log("Copying directories...")
 config.dev.copydirs.forEach(element => 
-	ncp(config.dev.srcdir + element, `${config.dev.builddir}/${element}`, function (err) {
+	ncp(config.dev.srcdir + element, `${config.dev.builddir}/${element}`, (err) => {
 	 if (err) {
-	   return console.error(err);
+	   console.error(err);
 	 }
-	 console.log(`Copy ${element} to build directory.`);
+	 console.log(`Copied directory ${element}/ to build directory.`);
 }));
+
+console.log("Copying static pages...")
+config.dev.otherpages.forEach(element =>
+	ncp(config.dev.srcdir + element, `${config.dev.builddir}/${element}`, (err) => {
+		 if (err) {
+		   console.error(err);
+		 } else {
+			 console.log(`Copied ${element} to build directory.`);
+		 }
+}));
+
 
 // console.log(`${config.dev.builddir}/index.html`);
