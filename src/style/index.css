@@ -108,6 +108,12 @@ header {
 	grid-area: links;
 }
 
+@media screen and (max-width: 1000px) {
+	#links {
+		margin-left: 0vw;
+	}
+}
+
 #aboutme {
 	grid-area: about;
 }
