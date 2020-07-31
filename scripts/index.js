@@ -16,6 +16,9 @@ const posts = fs
 	.map(post => p.postHtml(p.createPost(post)))
 	.join('');
 
+console.log("Compiling aboutme...");
+const aboutme = p.renderMarkdown(config.dev.srcdir + config.dev.aboutme);
+
 console.log("Generating index.html...");
 const index = eval('`' + template + '`');
 

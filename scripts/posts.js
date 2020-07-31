@@ -11,6 +11,11 @@ const createPost = postPath => {
 	return content;
 };
 
+function renderMarkdown(filePath) {
+	const markdown = fs.readFileSync(filePath, "utf8");
+	return marked(markdown);
+}
+
 const postHtml = data => `
 <div class="post">
 	<div class="postheading">
@@ -23,6 +28,7 @@ const postHtml = data => `
 `;
 
 module.exports = {
+	renderMarkdown,
 	createPost,
 	postHtml
 };

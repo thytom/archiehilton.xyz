@@ -5,6 +5,7 @@
 		"publicdir" : "./public",
 		"postsdir" : "posts",
 		"templatefile" : "template.html",
+		"aboutme" : "aboutme.md",
 		"copydirs" : ["img", "style"]
 	}
 }

@@ -123,12 +123,12 @@ main {
 	grid-template-rows: auto;
 	grid-template-areas:
 		"about links"
-		"projects projects";
+		"articles articles";
 	margin: 0 2vw;
 }
 
-#projects {
-	grid-area: projects;
+#articles {
+	grid-area: articles;
 }
 
 a {
