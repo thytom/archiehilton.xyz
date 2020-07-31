@@ -112,6 +112,10 @@ header {
 	#links {
 		margin-left: 0vw;
 	}
+
+	.card {
+		margin: 2vw 0;
+	}
 }
 
 #aboutme {
