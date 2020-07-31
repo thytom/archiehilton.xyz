@@ -10,6 +10,9 @@ const template = fs.readFileSync(config.dev.srcdir + config.dev.templatefile);
 const articleTemplate = fs.readFileSync(config.dev.srcdir + config.dev.articletemplatefile);
 const archiveTemplate = fs.readFileSync(config.dev.srcdir + config.dev.archivetemplatefile);
 
+console.log("Ensuring " + config.dev.builddir + "exists...");
+fs.mkdirSync(config.dev.builddir, {recursive : true});
+
 console.log("Compiling posts...");
 const posts = fs.readdirSync(config.dev.srcdir + config.dev.postsdir)
 	.sort(natsort({direction: 'desc'}))
@@ -36,7 +39,6 @@ fs.writeFileSync(config.dev.builddir + '/' + config.dev.archivetemplatefile, eva
 
 console.log("Compiling post pages...");
 
-fs.mkdirSync(config.dev.builddir, {recursive : true});
 
 posts.forEach(data => {
 	fs.writeFileSync(`${config.dev.builddir}/${data.path}.html`,
