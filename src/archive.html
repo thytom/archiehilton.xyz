@@ -16,27 +16,20 @@
 	<div id="banner">
 	</div>
 
+	<style type="text/css">
+main {
+	display: block;
+}
+
+main>h1 {
+	padding: 1vw 0 0 0;
+	margin: 0;
+}
+	</style>
+
 	<main>
-		<div class="card p-summary" id="aboutme">
-			<h1>About Me</h1>
-			${aboutme}
-		</div>
-		<div class="card" id="links">
-			<h1>Links</h1>
-			<li>
-				<a href="mailto:archie@archiehilton.xyz">Email Me</a>
-			</li>
-			<li>
-				<a href="https://github.com/thytom">GitHub</a>
-			</li>
-		</div>
-		<div class="h-feed" id="articles">
-			<div id="articles-header">
-				<h1>Articles</h1>
-				<a href="archive.html">View Archive</a>
-			</div>
-			${indexPosts}
-		</div>
+		<h1>Archive</h1>
+		${archive}
 	</main>
 </body>
 </html>

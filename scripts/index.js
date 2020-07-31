@@ -7,23 +7,47 @@ const p = require("./posts.js");
 ncp.limit = 16;
 
 const template = fs.readFileSync(config.dev.srcdir + config.dev.templatefile);
+const articleTemplate = fs.readFileSync(config.dev.srcdir + config.dev.articletemplatefile);
+const archiveTemplate = fs.readFileSync(config.dev.srcdir + config.dev.archivetemplatefile);
 
 console.log("Compiling posts...");
-const posts = fs
-	.readdirSync(config.dev.srcdir + config.dev.postsdir)
+const posts = fs.readdirSync(config.dev.srcdir + config.dev.postsdir)
 	.sort(natsort({direction: 'desc'}))
+	.map(post => p.createPost(post));
+
+const indexPosts = JSON.parse(JSON.stringify(posts))
 	.slice(0, 10)
-	.map(post => p.postHtml(p.createPost(post)))
+	.map(post => {
+		post.body = post.body.slice(0, 400) + `... <a href="${post.path}.html">read more</a></p>`;
+		console.log(post.body + "\n\n\n");
+		return p.postHtml(post);
+	})
 	.join('');
+
+console.log("Generating archive.html...");
+
+const archive = JSON.parse(JSON.stringify(posts))
+	.map(post => {
+		return `<li><a href="${post.path}.html"> ${post.attributes.title} - ${post.attributes.date}</a></li>`
+	})
+	.join('');
+
+fs.writeFileSync(config.dev.builddir + '/' + config.dev.archivetemplatefile, eval('`' + archiveTemplate + '`'));
+
+console.log("Compiling post pages...");
+
+fs.mkdirSync(config.dev.builddir, {recursive : true});
+
+posts.forEach(data => {
+	fs.writeFileSync(`${config.dev.builddir}/${data.path}.html`,
+		eval('`' + articleTemplate + '`'));
+});
 
 console.log("Compiling aboutme...");
 const aboutme = p.renderMarkdown(config.dev.srcdir + config.dev.aboutme);
 
 console.log("Generating index.html...");
 const index = eval('`' + template + '`');
-
-if(!fs.existsSync(config.dev.builddir))
-	fs.mkdirSync(config.dev.builddir);
 
 console.log("Writiting index.html to build directory...");
 fs.writeFileSync(`${config.dev.builddir}/index.html`, index);
@@ -45,7 +69,4 @@ config.dev.otherpages.forEach(element =>
 		 } else {
 			 console.log(`Copied ${element} to build directory.`);
 		 }
-}));
-
-
-// console.log(`${config.dev.builddir}/index.html`);
+}))

@@ -2,9 +2,12 @@
 	"dev" : {
 		"srcdir" : "./src/",
 		"builddir"	: "./_build",
+		"articlebuilddir" : "article",
 		"publicdir" : "./public",
 		"postsdir" : "posts",
 		"templatefile" : "template.html",
+		"articletemplatefile" : "article.html",
+		"archivetemplatefile" : "archive.html",
 		"aboutme" : "aboutme.md",
 		"copydirs" : ["img", "style"],
 		"otherpages" : []
