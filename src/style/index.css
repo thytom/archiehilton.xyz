@@ -1,12 +1,17 @@
 html {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-size: clamp(10px, 0.9vw, 20px);
+	font-family: 'Heebo', sans-serif;
+	font-size: clamp(9px, 0.9vw, 20px);
 	background:		#202020;
 	color:			#e5e5e5;
 }
 
+p {
+	line-height: 1.3rem;
+}
+
 body {
-	width: 1000px;
+	min-width: 50%;
+	max-width: min(1000px, 100%);
 	margin:			0 auto 0 auto !important;
 	padding:		0 !important;
 	height: 100%;
@@ -15,36 +20,20 @@ body {
 header {
 	background:		#202020;
 	color:			#e5e5e5;
-	margin:			0 !important;
-	padding-left:	20%;
-	padding-right: 	20%;
-	padding-bottom: 1vw;
-}
+	margin:			10px !important;
 
-#profile {
-	border-radius: 50%;
-	width: 8vw;
-	height: 8vw;
-	margin: 1vw 0 0 0;
-	margin-left: auto;
-	margin-right: auto;
+	text-align: center;
 }
 
 #title {
-	text-align: center;
-	width: 100%;
-	margin: 		0;
-	margin-top: 1vw;
-	text:			#e5e5e5;
+	padding: 0;
+	margin: 0;
 }
 
 #subtitle {
-	text-align: center;
-	width: 100%;
-	margin: 		0;
-	text:			#e5e5e5;
+	padding: 0;
+	margin: 0;
 	text-decoration: none;
-	font-weight: 100;
 }
 
 #banner {
@@ -153,7 +142,7 @@ img.img_span {
 
 a {
 	text-decoration:	none;
-	transition: 0.5s;
+	transition: color 0.5s;
 }
 
 a:active{
@@ -169,6 +158,5 @@ a:visited {
 }
 
 a:hover {
-	/* background:		#e5e5e5; */
 	color:			#e5e5e5;
 }
