@@ -17,34 +17,25 @@
 	</div>
 
 	<main>
-		<div class="horizontal">
-			<div id="sidebar">
-				<div class="post">
-					<div class="postheading">
-						<h1>Links</h1>
-					</div> 
-					<hr/>
-					<li>
-						<a href="mailto:archie@archiehilton.xyz">Email Me</a>
-					</li>
-					<li>
-						<a href="https://github.com/thytom">GitHub</a>
-					</li>
-				</div>
-				<div class="post">
-					<div class="postheading">
-						<h1>About Me</h1>
-					</div> 
-					<hr/>
-					<p>Hi! My name's Archie. I'm an undergraduate computer scientist
-					at the University of Nottingham, with interests in software
-					design, architecture, web development and functional programming.
-					</p>
-				</div>
-			</div>
-			<div id="articles">
-				${posts}
-			</div>
+		<div class="card">
+			<h1>About Me</h1>
+			<p>Hi! My name's Archie. I'm an undergraduate computer scientist
+			at the University of Nottingham, with interests in software
+			design, architecture, web development and functional programming.
+			</p>
+		</div>
+		<div class="card" id="links">
+			<h1>Links</h1>
+			<li>
+				<a href="mailto:archie@archiehilton.xyz">Email Me</a>
+			</li>
+			<li>
+				<a href="https://github.com/thytom">GitHub</a>
+			</li>
+		</div>
+		<div id="projects">
+			<h1>Projects</h1>
+			${posts}
 		</div>
 	</main>
 </body>
