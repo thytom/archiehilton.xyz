@@ -19,7 +19,7 @@ function renderMarkdown(filePath) {
 const postHtml = data => `
 <div class="post">
 	<div class="postheading">
-		<h1>${data.attributes.title}</h1>
+		<h1><a href="${data.path}.html">${data.attributes.title}</a></h1>
 		<p>${data.attributes.date}</p>
 	</div>
 	<hr/>
