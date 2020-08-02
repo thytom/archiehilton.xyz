@@ -8,4 +8,4 @@ date: "2019-11-07"
 dwmbar is a modular status bar that a friend and I wrote for the dwm tiling
 window manager. I wanted something lightweight and incredibly hackable, and
 chose to write my own to achieve this. Check it out
- [here](https://github.com/thytom/dwmbar)!
+[here](https://github.com/thytom/dwmbar)!
