@@ -61,15 +61,8 @@ attempt("Building archive.html", () => {
 	fs.writeFile(`./${config.dir.build}/archive.html`, eval('`' + templates.archive + '`'), defaultHandler);
 });
 
-attempt(`Copying ${config.static.dirs.length} directories`, () =>{
-	config.static.dirs.forEach(element => {
-		process.stdout.write(`\n\t${element}/...`);
-		ncp(`./${config.dir.src}/${element}`, `./${config.dir.build}/${element}`);
-	})
-});
-
-attempt(`Copying ${config.static.pages.length} static pages`, () => {
-	config.static.pages.forEach(element => {
+attempt(`Copying ${config.static.length} static files`, () =>{
+	config.static.forEach(element => {
 		process.stdout.write(`\n\t${element}/...`);
 		ncp(`./${config.dir.src}/${element}`, `./${config.dir.build}/${element}`);
 	})
