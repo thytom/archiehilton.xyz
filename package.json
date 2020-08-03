@@ -6,7 +6,8 @@
   "scripts": {
     "build": "./scripts/build.sh",
     "deploy": "./scripts/deploy.sh",
-    "clean": "rm -r _build"
+    "clean": "rm -rf _build",
+	"fullclean" : "rm -rf _build public"
   },
   "repository": {
     "type": "git",
