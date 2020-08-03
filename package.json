@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node ./scripts/index.js",
+    "build": "node ./src/index.js",
     "deploy": "npm install && npm run build && cp -r ./_build ./public && npm run clean",
     "redeploy": "rm -r public && npm run deploy",
     "rebuild": "npm run clean && npm run build",
