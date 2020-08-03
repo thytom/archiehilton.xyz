@@ -13,14 +13,16 @@ const timeStart = process.hrtime();
 
 const defaultHandler = (err, data) => {if(err) throw new Error(err.message)};
 
-const template 		  = fs.readFileSync(config.dev.srcdir + config.dev.templatefile);
-const articleTemplate = fs.readFileSync(config.dev.srcdir + config.dev.articletemplatefile);
-const archiveTemplate = fs.readFileSync(config.dev.srcdir + config.dev.archivetemplatefile);
+const templates = {
+	index 	: fs.readFileSync(`./${config.dir.src}/${config.templates.template}`),
+	article : fs.readFileSync(`./${config.dir.src}/${config.templates.article}`),
+	archive : fs.readFileSync(`./${config.dir.src}/${config.templates.archive}`)
+};
 
-attempt("Building directories", () => fs.mkdir(config.dev.builddir, {recursive : true}, defaultHandler));
+attempt("Building directories", () => fs.mkdir(`./${config.dir.build}`, {recursive : true}, defaultHandler));
 
 const posts = attempt("Rendering posts", () => {
-	return fs.readdirSync(config.dev.srcdir + config.dev.postsdir)
+	return fs.readdirSync(`./${config.dir.src}/${config.dir.posts}`)
 	.sort(natsort({direction: 'desc'}))
 	.map(post => p.createPost(post));
 });
@@ -28,8 +30,8 @@ const posts = attempt("Rendering posts", () => {
 attempt(`Compiling ${posts.length} post pages`, () => {
 	posts.forEach(data => {
 		process.stdout.write(`\n\t${data.path}...`);
-		fs.writeFile(`${config.dev.builddir}/${data.path}.html`,
-			eval('`' + articleTemplate + '`'), defaultHandler);
+		fs.writeFile(`${config.dir.build}/${data.path}.html`,
+			eval('`' + templates.article + '`'), defaultHandler);
 	});
 });
 
@@ -43,10 +45,10 @@ attempt("Building index.html", () => {
 		.join('');
 
 	process.stdout.write("\n\tCompiling aboutme...");
-	const aboutme = p.renderMarkdown(config.dev.srcdir + config.dev.aboutme);
+	const aboutme = p.renderMarkdown(`./${config.dir.src}/${config.templates.aboutme}`);
 
 	process.stdout.write("\n\tWriting index.html...");
-	fs.writeFile(`${config.dev.builddir}/index.html`, eval('`' + template + '`'), defaultHandler);
+	fs.writeFile(`./${config.dir.build}/index.html`, eval('`' + templates.index + '`'), defaultHandler);
 });
 
 attempt("Building archive.html", () => {
@@ -56,20 +58,20 @@ attempt("Building archive.html", () => {
 	})
 	.join('');
 	process.stdout.write("\n\tWriting archive.html...");
-	fs.writeFile(`${config.dev.builddir}/archive.html`, eval('`' + archiveTemplate + '`'), defaultHandler);
+	fs.writeFile(`./${config.dir.build}/archive.html`, eval('`' + templates.archive + '`'), defaultHandler);
 });
 
-attempt(`Copying ${config.dev.copydirs.length} directories`, () =>{
-	config.dev.copydirs.forEach(element => {
+attempt(`Copying ${config.static.dirs.length} directories`, () =>{
+	config.static.dirs.forEach(element => {
 		process.stdout.write(`\n\t${element}/...`);
-		ncp(config.dev.srcdir + element, `${config.dev.builddir}/${element}`);
+		ncp(`./${config.dir.src}/${element}`, `./${config.dir.build}/${element}`);
 	})
 });
 
-attempt(`Copying ${config.dev.otherpages.length} static pages`, () => {
-	config.dev.otherpages.forEach(element => {
+attempt(`Copying ${config.static.pages.length} static pages`, () => {
+	config.static.pages.forEach(element => {
 		process.stdout.write(`\n\t${element}/...`);
-		ncp(config.dev.srcdir + element, `${config.dev.builddir}/${element}`);
+		ncp(`./${config.dir.src}/${element}`, `./${config.dir.build}/${element}`);
 	})
 });
 

@@ -4,7 +4,7 @@ const marked = require("./marked.js");
 const fs = require("fs");
 
 const createPost = postPath => {
-	const data = fs.readFileSync(`${config.dev.srcdir}/${config.dev.postsdir}/${postPath}/index.md`, "utf8");
+	const data = fs.readFileSync(`./${config.dir.src}/${config.dir.posts}/${postPath}/index.md`, "utf8");
 	const content = fm(data);
 	content.body = marked(content.body);
 	content.path = postPath;
