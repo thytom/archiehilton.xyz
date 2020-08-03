@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node ./src/index.js",
-    "deploy": "npm install && npm run build && cp -r ./_build ./public && npm run clean",
-    "redeploy": "rm -r public && npm run deploy",
-    "rebuild": "npm run clean && npm run build",
+    "build": "./scripts/build.sh",
+    "deploy": "./scripts/deploy.sh",
     "clean": "rm -r _build"
   },
   "repository": {
