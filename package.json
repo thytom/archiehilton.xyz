@@ -30,5 +30,10 @@
     "natural-sort": "^1.0.0",
     "ncp": "^2.0.0",
     "npc": "0.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5"
   }
 }
