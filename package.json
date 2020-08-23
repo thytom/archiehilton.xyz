@@ -7,7 +7,7 @@
     "build": "./scripts/build.sh",
     "deploy": "./scripts/deploy.sh",
     "clean": "rm -rf _build",
-	"fullclean" : "rm -rf _build public"
+    "fullclean": "rm -rf _build public"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,7 @@
     "lodash": "^4.17.19",
     "marked": "^1.1.0",
     "natural-sort": "^1.0.0",
-    "ncp": "^2.0.0",
-    "npc": "0.0.1"
+    "ncp": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^7.6.0",
