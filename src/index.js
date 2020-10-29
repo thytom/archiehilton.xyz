@@ -39,7 +39,7 @@ attempt("Building index.html", () => {
 	process.stdout.write("\n\tCompiling main page posts...");
 	const indexPosts = posts.slice(0, 10)
 		.map(post => {
-			post.body = truncate(post.body, 200, {ellipsis: `...<a href="${post.path}">read more</a>`, keepImageTag: true});
+			post.body = truncate(post.body, 200, {ellipsis: `...<a href="${post.path}.html">read more</a>`, keepImageTag: true});
 			return p.postHtml(post);
 		})
 		.join('');
